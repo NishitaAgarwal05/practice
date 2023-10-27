@@ -1,0 +1,33 @@
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div
+      fxFlex="33%"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
+    >
+      <mat-card style="margin-bottom: 6px; background-color: #f5f5f5">
+        <mat-card-content>
+          <div>
+            <div fxFlex="60%" fxLayout="column">
+              <div fxFlex="50%" fxLayout="column wrap">
+                <i class="material-icons blue-rotate">flight</i>
+                <div style="max-height: 100%"><p>Something</p></div>
+              </div>
+              <div fxFlex="50%" fxLayout="column wrap"></div>
+            </div>
+            <div fxFlex="40%" style="display: block">
+              <canvas
+                baseChart
+                [type]="pieChartType"
+                [datasets]="pieChartData"
+                height="100"
+              >
+              </canvas>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
